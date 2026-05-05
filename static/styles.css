@@ -1,0 +1,64 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: grey;
+  margin: 10px;
+  padding: 10px;
+}
+
+.content {
+  width: 80%;
+  background-color: #f5f5f5;
+  margin: 50px auto;
+  margin-bottom: 50px;
+  text-align: center;
+  height: 400px auto;
+  border-radius: 3cap;
+}
+.content h1 {
+  color: green;
+  font-size: 30px;
+}
+.content table {
+  align-items: center;
+  width: 80%;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+.content table th {
+  background-color: peachpuff;
+  color: rgb(61, 7, 7);
+  font-size: 25px;
+}
+.content table th, .content table td {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 0.5cap;
+}
+.content table th .btn, .content table td .btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 2px 16px;
+  color: white;
+  border-radius: 5px;
+  margin: 5px;
+}
+.content table th .btn-delete, .content table td .btn-delete {
+  background-color: rgb(114, 21, 21);
+  transition: rgb(100, 21, 21) 0.3s ease;
+}
+.content table th .btn-delete:hover, .content table td .btn-delete:hover {
+  background-color: rgb(200, 13, 13);
+  cursor: pointer;
+}
+.content table th .btn-update, .content table td .btn-update {
+  background-color: rgb(29, 105, 130);
+  transition: grey 0.3s ease;
+}
+.content table th .btn-update:hover, .content table td .btn-update:hover {
+  background-color: rgb(41, 41, 139);
+  cursor: pointer;
+}
+.content form {
+  font-size: larger;
+  padding: 10px;
+}/*# sourceMappingURL=styles.css.map */

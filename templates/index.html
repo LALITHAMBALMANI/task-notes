@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+
+{% block head %} 
+<title>This is index page</title>
+{% endblock %}
+
+{% block body %} 
+
+<div class="content">
+    <h1>Task Notes</h1>
+
+    {% if tasks | length <1 %}
+    <h3>Sorry No tasks yet ... You can add one below...</h3>
+    {%else %}
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Added on</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{task.content}}</td>
+                <td>{{task.created.strftime("%d-%m-%Y")}}</td>
+                <td>
+                    <a href="/delete/{{task.id}}" class="btn btn-delete">DELETE</a>
+                    <br/>
+                    <a href="/update/{{task.id}}" class="btn btn-update">EDIT</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <form action = "/", method = "POST">
+        <input type = "text" name="content" id="content" />
+        <input type="submit" name="Add Task" id="submit" value="Add new task"/>
+    </form>
+</div>
+
+{% endblock %}
